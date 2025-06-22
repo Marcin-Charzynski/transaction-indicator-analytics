@@ -6,6 +6,7 @@ baseurl: "/transaction-indicator-analytics"
 url: "https://marcin-charzynski.github.io"
 plugins:
   - jekyll-remote-theme
+  - jekyll-ipynb
 remote_theme: Marcin-Charzynski/marcin-charzynski.github.io
 markdown: kramdown
 
