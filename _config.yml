@@ -1,6 +1,8 @@
-title: AML ETL & Regulatory Simulation
-description: A simulation of Anti-Money Laundering (AML) processes and ETL pipelines using Python and SQLite.
-baseurl: "/aml-etl-regulatory-simulation"
+title: Transaction Monitoring Portfolio
+description: >
+  Portfolio project analyzing rule-based suspicious transaction “indicators,”
+  deduplicating alerts and visualizing overlaps with Python, pandas and Plotly.
+baseurl: "/transaction-monitoring-portfolio"
 url: "https://marcin-charzynski.github.io"
 plugins:
   - jekyll-remote-theme
