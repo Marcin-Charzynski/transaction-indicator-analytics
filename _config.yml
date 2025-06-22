@@ -2,7 +2,7 @@ title: Transaction Monitoring Portfolio
 description: >
   Portfolio project analyzing rule-based suspicious transaction “indicators,”
   deduplicating alerts and visualizing overlaps with Python, pandas and Plotly.
-baseurl: "/transaction-indicator-analysis"
+baseurl: "/transaction-indicator-analytics"
 url: "https://marcin-charzynski.github.io"
 plugins:
   - jekyll-remote-theme
