@@ -1,1 +1,1 @@
-# --transaction-indicator-analytics
+# transaction-indicator-analytics
