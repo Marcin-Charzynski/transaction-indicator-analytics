@@ -27,10 +27,12 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "2.7"    # same as GitHub Pages
+          ruby-version: "2.7"
 
-      - name: Update RubyGems (unblocks ffi, etc.)
-        run: gem update --system
+      - name: Install RubyGems update (v3.3.22) and upgrade
+        run: |
+          gem install rubygems-update -v "3.3.22"
+          update_rubygems --no-document
 
       - name: Install Bundler (2.4.22)
         run: gem install bundler -v "2.4.22"
