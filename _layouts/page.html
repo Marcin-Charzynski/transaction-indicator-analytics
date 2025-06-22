@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{ page.title }} - AML ETL & Regulatory Simulation</title>
+  <title>{{ page.title }} – Transaction Monitoring Portfolio</title>
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -19,13 +19,13 @@
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-sql.min.js"></script>
 </head>
 <body class="min-h-screen bg-gray-50 text-gray-800 font-sans leading-relaxed antialiased">
-  
+
   <!-- Navigation -->
   <nav class="bg-white shadow-md">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
       <!-- Site Title -->
       <a href="{{ site.baseurl }}/" class="text-xl font-semibold text-indigo-600 hover:text-indigo-800">
-        AML ETL & Regulatory Simulation
+        Transaction Monitoring Portfolio
       </a>
       <!-- Back to Portfolio (desktop only) -->
       <a href="{{ site.url }}/" class="text-sm text-indigo-500 hover:text-indigo-700 hidden md:inline-flex items-center space-x-1">
@@ -90,7 +90,7 @@
       </ul>
     </div>
   </nav>
-  
+
   <!-- Main Content Container with Sidebar and Project Content -->
   <div class="container mx-auto flex flex-col md:flex-row flex-1 px-4 py-6 gap-6">
     {% include sidebar.html %}
@@ -100,18 +100,18 @@
       {{ content }}
     </main>
   </div>
-  
+
   <!-- Footer -->
   <footer class="bg-white border-t mt-12">
     <div class="container mx-auto px-4 py-6 text-sm text-gray-500 flex flex-col md:flex-row justify-between items-center gap-2">
-      <span>&copy; {{ site.time | date: "%Y" }} Marcin – AML ETL & Regulatory Simulation</span>
+      <span>&copy; {{ site.time | date: "%Y" }} Marcin – Transaction Monitoring Portfolio</span>
       <span>
         <a href="https://www.linkedin.com/in/marcin-charzy%C5%84ski/" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600">LinkedIn</a> · 
         <a href="https://github.com/Marcin-Charzynski" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600">GitHub</a>
       </span>
     </div>
   </footer>
-  
+
   <script>
     // Toggle mobile menu
     document.getElementById('menu-btn').addEventListener('click', () => {
