@@ -1,4 +1,4 @@
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+name: Deploy Jekyll with IPYNB plugin
 
 on:
   push:
@@ -18,7 +18,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Configure Pages
@@ -27,14 +27,18 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "2.7"       # wersja zgodna z GH Pages
+          ruby-version: "2.7"    # same as GitHub Pages
 
-      - name: Install dependencies
-        run: |
-          gem install bundler jekyll jekyll-ipynb
-          bundle install --jobs 4 --retry 3
+      - name: Update RubyGems (unblocks ffi, etc.)
+        run: gem update --system
 
-      - name: Build site with Jekyll + ipynb plugin
+      - name: Install Bundler (2.4.22)
+        run: gem install bundler -v "2.4.22"
+
+      - name: Bundle install gems
+        run: bundle install --jobs 4 --retry 3
+
+      - name: Build site with jekyll-ipynb
         run: bundle exec jekyll build --source ./ --destination ./_site
 
       - name: Upload artifact
