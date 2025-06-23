@@ -11,5 +11,6 @@ remote_theme: Marcin-Charzynski/marcin-charzynski.github.io
 markdown: kramdown
 
 kramdown:
+  input: GFM
   syntax_highlighter_opts:
     line_numbers: true
