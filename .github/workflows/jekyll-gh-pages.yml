@@ -18,24 +18,26 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v5
 
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
+      - uses: ruby/setup-ruby@v1
         with:
           ruby-version: "2.7"
 
-      - name: Install RubyGems update (v3.3.22) and upgrade
+      - name: Install RubyGems updater and bump
         run: |
           gem install rubygems-update -v "3.3.22"
           update_rubygems --no-document
 
-      - name: Install Bundler (2.4.22)
+      - name: Install Bundler 2.4.22
         run: gem install bundler -v "2.4.22"
+
+      - name: Authenticate Bundler → GitHub
+        env:
+          BUNDLE_GITHUB__COM: ${{ secrets.GITHUB_TOKEN }}
+        run: echo "Authenticated to GitHub for public git deps"
 
       - name: Bundle install gems
         run: bundle install --jobs 4 --retry 3
@@ -43,8 +45,7 @@ jobs:
       - name: Build site with jekyll-ipynb
         run: bundle exec jekyll build --source ./ --destination ./_site
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v3
 
   deploy:
     needs: build
