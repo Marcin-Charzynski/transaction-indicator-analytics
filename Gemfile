@@ -1,3 +1,3 @@
 source "https://rubygems.org"
 gem "jekyll", "~> 3.10"
-gem "jekyll-ipynb", git: "https://github.com/bhollier/jekyll-ipynb.git"
+gem "jekyll-jupyter-notebook", git: "https://github.com/red-data-tools/jekyll-jupyter-notebook.git"
