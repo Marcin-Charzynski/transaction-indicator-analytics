@@ -57,28 +57,34 @@
             <span>Back to Portfolio</span>
           </a>
         </li>
+        {% assign baseUrl = site.baseurl %}
+        {% assign overviewUrl = baseUrl | append: "/" %}
+        {% assign architectureUrl = baseUrl | append: "/architecture/" %}
+        {% assign scalabilityUrl = baseUrl | append: "/scalability/" %}
+        {% assign automationUrl = baseUrl | append: "/automation/" %}
+        {% assign testingUrl = baseUrl | append: "/testing/" %}
         <li>
-          <a href="{{ site.baseurl }}/" class="block py-2 hover:text-indigo-600 {% if page.url == site.baseurl or page.url == site.baseurl | append: '/' %}font-bold text-indigo-700{% endif %}">
+          <a href="{{ overviewUrl }}" class="block py-2 hover:text-indigo-600 {% if page.url == baseUrl or page.url == overviewUrl %}font-bold text-indigo-700{% endif %}">
             Overview
           </a>
         </li>
         <li>
-          <a href="{{ site.baseurl }}/architecture/" class="block py-2 hover:text-indigo-600 {% if page.url == site.baseurl | '/architecture/' %}font-bold text-indigo-700{% endif %}">
+          <a href="{{ architectureUrl }}" class="block py-2 hover:text-indigo-600 {% if page.url == architectureUrl %}font-bold text-indigo-700{% endif %}">
             Architecture & Code
           </a>
         </li>
         <li>
-          <a href="{{ site.baseurl }}/scalability/" class="block py-2 hover:text-indigo-600 {% if page.url == site.baseurl | '/scalability/' %}font-bold text-indigo-700{% endif %}">
+          <a href="{{ scalabilityUrl }}" class="block py-2 hover:text-indigo-600 {% if page.url == scalabilityUrl %}font-bold text-indigo-700{% endif %}">
             Scalability & Performance
           </a>
         </li>
         <li>
-          <a href="{{ site.baseurl }}/automation/" class="block py-2 hover:text-indigo-600 {% if page.url == site.baseurl | '/automation/' %}font-bold text-indigo-700{% endif %}">
+          <a href="{{ automationUrl }}" class="block py-2 hover:text-indigo-600 {% if page.url == automationUrl %}font-bold text-indigo-700{% endif %}">
             Automation & CI/CD
           </a>
         </li>
         <li>
-          <a href="{{ site.baseurl }}/testing/" class="block py-2 hover:text-indigo-600 {% if page.url == site.baseurl | '/testing/' %}font-bold text-indigo-700{% endif %}">
+          <a href="{{ testingUrl }}" class="block py-2 hover:text-indigo-600 {% if page.url == testingUrl %}font-bold text-indigo-700{% endif %}">
             Testing
           </a>
         </li>

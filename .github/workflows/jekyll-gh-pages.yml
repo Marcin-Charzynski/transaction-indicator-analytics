@@ -52,6 +52,14 @@ jobs:
       - name: Build site with jekyll-ipynb
         run: bundle exec jekyll build --source ./ --destination ./_site
 
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.8"
+
+      - name: Install Jupyter
+        run: pip install jupyter
+
       - uses: actions/upload-pages-artifact@v3
 
   deploy:
