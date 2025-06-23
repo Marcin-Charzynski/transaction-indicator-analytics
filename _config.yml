@@ -4,6 +4,8 @@ description: >
   deduplicating alerts and visualizing overlaps with Python, pandas and Plotly.
 baseurl: "/transaction-indicator-analytics"
 url: "https://marcin-charzynski.github.io"
+include:
+  - notebooks
 plugins:
   - jekyll-remote-theme
   - jekyll-jupyter-notebook
