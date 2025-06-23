@@ -40,6 +40,8 @@ jobs:
         run: echo "Authenticated to GitHub for public git deps"
 
       - name: Bundle install gems
+        env:
+          BUNDLE_GITHUB__COM: ${{ secrets.GITHUB_TOKEN }}
         run: bundle install --jobs 4 --retry 3
 
       - name: Build site with jekyll-ipynb
